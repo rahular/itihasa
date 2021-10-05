@@ -4,6 +4,33 @@ Itihāsa is a Sanskrit-English translation corpus containing 93,000 Sanskrit shl
 
 The `data` folder contains the randomized train, development, and test sets. The original extracted data can be found [here](https://github.com/rahular/itihasa/tree/gh-pages/res) in JSON format. If you just want to browse the data, you can go [here](http://rahular.com/itihasa/).
 
+### Usage
+
+Itihāsa can now be used directly from [Huggingface Datasets](https://huggingface.co/datasets/rahular/itihasa)
+```
+>> from datasets import load_dataset
+>> dataset = load_dataset("rahular/itihasa")
+>> dataset
+DatasetDict({
+    train: Dataset({
+        features: ['translation'],
+        num_rows: 75162
+    })
+    validation: Dataset({
+        features: ['translation'],
+        num_rows: 6149
+    })
+    test: Dataset({
+        features: ['translation'],
+        num_rows: 11722
+    })
+})
+
+>> dataset['train'][0]
+{'translation': {'en': 'The ascetic Vālmīki asked Nārada, the best of sages and foremost of those conversant with words, ever engaged in austerities and Vedic studies.',
+  'sn': 'ॐ तपः स्वाध्यायनिरतं तपस्वी वाग्विदां वरम्। नारदं परिपप्रच्छ वाल्मीकिर्मुनिपुङ्गवम्॥'}}
+```
+
 ### Citation
 If you found this dataset to be useful, please consider citing the paper as follows:
 ```
