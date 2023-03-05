@@ -44,8 +44,7 @@ def write_shlokas(text, data):
             elif text == "mahabharata":
                 html = f"<h3>{obj['parva']}: Chapter {obj['chapter']}</h3><h4>{obj['description']}</h4>"
             for aid, (s, t) in enumerate(zip(obj["sn"], obj["en"])):
-                # html += f"<p id='{aid+1}'><a href='#{aid+1}'>#{aid+1}</a><br />{s}<br />{t}</p>\n"
-                html += f"<p id='{aid+1}'>{s}<br />{t}</p>\n"
+                html += f"<p id='{aid+1}'><a href='#{aid+1}'></a>{s}<br />{t}</p>\n"
             with open(os.path.join(ROOT_DIR, text, vol, f"{idx+1}.html"), "w") as f:
                 f.write(html)
 
