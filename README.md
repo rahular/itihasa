@@ -2,7 +2,7 @@
 
 **Update (March 20, 2023)**: You can now do semantic search on the corpus using this script.
 
-- To use the script, get a key from OpenAI ([link](https://platform.openai.com/account/api-keys)) and add it to your environment `export OPENAI_API_KEY-"<yourkey>"`.
+- To use the script, get a key from OpenAI ([link](https://platform.openai.com/account/api-keys)) and add it to your environment `export OPENAI_API_KEY="<yourkey>"`.
 
 ----
 
